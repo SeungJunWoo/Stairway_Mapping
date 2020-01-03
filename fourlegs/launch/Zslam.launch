@@ -1,0 +1,15 @@
+<launch>
+  <node pkg="fourlegs" type="zslam" name="zslam" output="screen">
+    <param name="map_publish_topic"      value="mapped_pcl"/>
+    <param name="pcl_subscribe_topic"    value="filtered_PointCloud2"/>  
+    <param name="odom_subscribe_topic"   value="/t265/odom/sample"/>
+    <param name="leaf_size"              value="0.005"/><!--default 0.001-->
+    <param name="disp_R"                 value="false"/>
+    <param name="frame_id"               value="world"/>
+
+    <param name="linewidth"              value="0.003"/><!--default 0.003-->
+    <param name="bigradius"              value="0.03"/><!--default 0.05-->
+    <param name="mradius"                value="0.02"/><!--default 0.02-->
+    <param name="compensationval"        value="0.02"/>
+  </node>
+</launch>

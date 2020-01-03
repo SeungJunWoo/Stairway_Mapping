@@ -1,0 +1,32 @@
+<launch>
+    <node pkg="fourlegs" type="plane_detector" name="plane_detector" output="screen">
+
+    <!-- display-->
+    <param name="disp_point_number"         value="false"/>
+
+    <!-- topics-->
+    <param name="map_publish_topic"         value="colored_pcl"/>
+    <param name="pcl_subscribe_topic"       value="/Odomed_PointCloud"/>
+    <param name="frame_id"                  value="t265_odom_frame"/> 
+    <param name="horizontal_publish_topic"  value="horizontal"/>
+
+    <!-- pass filter-->
+    <param name="fieldname"                 value="x"/>  
+    <param name="passlimit"                 value="1.0"/>
+
+    <!-- voxel filter-->
+    <param name="voxel"                     value="0.005"/>
+
+    <!-- plane extraction-->
+    <param name="MinClusterSize"            value="3000"/>
+    <param name="DistanceThreshold"         value="0.008"/>
+    <param name="maxiter"                   value="80"/>
+
+    <!-- stair extraction -->
+    <param name="maxangle"                  value="5"/>
+    <param name="max_rel_angle"             value="1.5"/>
+    <param name="maxbaseangle"              value="10"/>
+    <param name="MinBaseSize"               value="30000"/>
+
+  </node>
+</launch>
