@@ -27,3 +27,74 @@ In order to install this package, clone the latest version from this repository 
     catkin_make
 
 ## Parameter
+
+![image](https://user-images.githubusercontent.com/35325906/71708165-8bfbd100-2e32-11ea-842a-6e5b79378cb0.png)
+
+### Display
+    
+- **`disp_point_number`**         
+
+display the number of points true/false
+
+### Topic name
+
+- **`map_publish_topic`**         
+
+It refers to the name of the point-cloud topic that represents the segmented planes in the current moment.
+
+- **`pcl_subscribe_topic`**       
+
+It refers to the name of the input point-cloud topic that is transformed from **rosodom2** node.
+ 
+- **`horizontal_publish_topic`**  
+
+It refers to the name of the output point-cloud topic of the stairway mapping algorithm.
+
+### Frame setting
+
+- **`frame_id`**       
+
+It refers to the name of the global frame.
+
+
+### Pass filter
+
+- **`fieldname`**                 
+
+camera direction x,y, or z
+
+- **`passlimit`**
+
+pass limit in meter
+
+### Voxel filter
+
+- **`voxel`**      
+
+voxel filtering grid size in meter
+
+### Plane extraction
+
+- **`MinClusterSize`** 
+
+A minimum number of required points to be segmented as a plane.
+
+- **`DistanceThreshold`**         
+
+RANSAC sampling threshold in meter
+
+- **`maxiter`**                   
+
+The number of maximum iteration in RANSAC process
+
+### stairstep
+
+- **`maxangle`**                  
+
+maximum angle from the ground in degree
+
+- **`max_rel_angle`**             
+
+Maximum allowed relative degree between each stairstep in a stairway 
+
+
