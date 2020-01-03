@@ -22,7 +22,7 @@ This software is built on the Robotic Operating System ([ROS]), which needs to b
 In order to install this package, clone the latest version from this repository into your catkin workspace and compile the package using ROS.
 
     cd catkin_workspace/src
-    git clone https://github.com/wsj6928/Indy7_proximity_mapping.git
+    git clone https://github.com/wsj6928/Stairway_Mapping.git
     cd ../
     catkin_make
 
